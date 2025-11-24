@@ -2,11 +2,13 @@ function getFirstElement<T>(arr: T[]): T {
   return arr[0];
 }
 
-getFirstElement([1, 2, 3]);           // 1
-getFirstElement(["a", "b", "c"]);     // "a"
-getFirstElement([true, false, true]); // true
+const numResult = getFirstElement<number>([1, 2, 3]);     // 1
+const strResult = getFirstElement<string>(["a", "b", "c"]);     // "a"
+const boolResult = getFirstElement<boolean>([true, false, true]); // true
 
-
+console.log(numResult);
+console.log(strResult);
+console.log(boolResult);
 // Завдання:
 
 // Зроби функцію узагальненою, використовуючи тип T, щоб вона працювала з масивами будь-якого типу.
